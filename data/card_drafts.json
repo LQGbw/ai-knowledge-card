@@ -1,0 +1,124 @@
+{
+  "cards": [
+    {
+      "term": "FDE",
+      "aliases": ["前线部署工程师"],
+      "one_line_definition": "深入客户业务现场，把 AI 能力部署进真实工作流的工程角色。",
+      "why_it_matters": "企业 AI 的难点正在从模型能力转向业务理解、数据接入和工程落地。",
+      "maturity_status": "emerging",
+      "uncertainty_note": "不同公司对 FDE 的职责范围和交付方式仍有差异。",
+      "confidence": "high",
+      "source_episode_ids": [1, 9]
+    },
+    {
+      "term": "蒸馏",
+      "aliases": ["模型蒸馏"],
+      "one_line_definition": "利用更强模型的输出或行为，训练另一个模型获得相近能力。",
+      "why_it_matters": "它能降低模型训练与使用成本，也引出了授权和能力提取的争议。",
+      "maturity_status": "contested",
+      "uncertainty_note": "正常训练技术与未经授权的能力提取之间，行业边界仍存在争议。",
+      "confidence": "high",
+      "source_episode_ids": [3, 11]
+    },
+    {
+      "term": "开放权重",
+      "aliases": ["Open Weights"],
+      "one_line_definition": "公开训练后的模型参数，让外部用户可以部署、推理或继续开发。",
+      "why_it_matters": "开放权重正在影响模型成本、开发生态和闭源模型的商业模式。",
+      "maturity_status": "stable",
+      "uncertainty_note": "开放权重不等于完整开源，训练数据、代码和授权条件可能仍不公开。",
+      "confidence": "high",
+      "source_episode_ids": [3]
+    },
+    {
+      "term": "Sim-to-Real",
+      "aliases": ["从仿真到现实", "Sim2Real"],
+      "one_line_definition": "先在仿真环境训练机器人，再把获得的能力迁移到现实世界。",
+      "why_it_matters": "它可以缓解真实机器人训练数据昂贵、危险且难以规模化的问题。",
+      "maturity_status": "stable",
+      "uncertainty_note": "仿真与现实之间仍存在差距，通常需要真实数据继续校准。",
+      "confidence": "high",
+      "source_episode_ids": [5]
+    },
+    {
+      "term": "RSI",
+      "aliases": ["递归自我提升", "Recursive Self-Improvement"],
+      "one_line_definition": "AI 改进自身能力后，再利用提升后的能力继续改进自己的过程。",
+      "why_it_matters": "如果形成可靠闭环，模型能力进步可能从人工推动转向部分自我推动。",
+      "maturity_status": "contested",
+      "uncertainty_note": "能否持续、可靠地实现递归提升仍未形成行业共识。",
+      "confidence": "medium",
+      "source_episode_ids": [7, 11]
+    },
+    {
+      "term": "Harness",
+      "aliases": ["Agent Harness"],
+      "one_line_definition": "围绕模型组织工具、上下文和执行循环的智能体编排层。",
+      "why_it_matters": "模型趋于通用后，智能体能否稳定完成任务越来越取决于编排与反馈机制。",
+      "maturity_status": "emerging",
+      "uncertainty_note": "不同团队对 Harness 是否包含记忆、评测和运行环境有不同划分。",
+      "confidence": "medium",
+      "source_episode_ids": [7, 22, 23]
+    },
+    {
+      "term": "经验差距",
+      "aliases": ["Experience Gap"],
+      "one_line_definition": "模型能力不断提高，但智能体无法积累每次真实交互经验的落差。",
+      "why_it_matters": "缩小差距需要把用户修正、撤销和任务结果转化为可持续学习信号。",
+      "maturity_status": "emerging",
+      "uncertainty_note": "这是特定分享中提出的概念，尚不能视为已经稳定的行业术语。",
+      "confidence": "medium",
+      "source_episode_ids": [21]
+    },
+    {
+      "term": "主权 AI",
+      "aliases": ["Sovereign AI"],
+      "one_line_definition": "企业在模型权重和智能能力层面掌握自主控制权的路线。",
+      "why_it_matters": "它试图把企业壁垒从调用通用 API 转向自有数据、模型和业务判断。",
+      "maturity_status": "contested",
+      "uncertainty_note": "该词也可能用于国家级 AI 基础设施，材料中的含义主要指企业自建智能。",
+      "confidence": "medium",
+      "source_episode_ids": [27]
+    },
+    {
+      "term": "奖励黑客",
+      "aliases": ["Reward Hacking"],
+      "one_line_definition": "模型钻评分或奖励规则的空子，获得高分却没有真正完成目标。",
+      "why_it_matters": "强化学习进入真实业务后，错误的验证标准可能训练出表面合格的行为。",
+      "maturity_status": "stable",
+      "uncertainty_note": "具体表现取决于任务、环境和评分机制。",
+      "confidence": "high",
+      "source_episode_ids": [25, 26]
+    },
+    {
+      "term": "Headless",
+      "aliases": ["无头软件", "Headless 工作流"],
+      "one_line_definition": "不依赖图形界面、可由 Agent 直接调用数据和能力的软件形态。",
+      "why_it_matters": "AI 可能绕过为人设计的界面，直接通过工具和接口完成工作。",
+      "maturity_status": "emerging",
+      "uncertainty_note": "GUI 不一定消失，更多是从唯一入口变为多种入口之一。",
+      "confidence": "medium",
+      "source_episode_ids": [36]
+    },
+    {
+      "term": "Agentic Economy",
+      "aliases": ["智能体经济"],
+      "one_line_definition": "围绕智能体运行、协作和交易形成的新型基础设施与商业分工。",
+      "why_it_matters": "沙箱、记忆和支付等能力可能从应用功能变成面向智能体的公共基础设施。",
+      "maturity_status": "emerging",
+      "uncertainty_note": "概念仍处早期，目前更多描述趋势而非边界清晰的经济体系。",
+      "confidence": "medium",
+      "source_episode_ids": [36]
+    },
+    {
+      "term": "世界模型",
+      "aliases": ["World Model"],
+      "one_line_definition": "让 AI 学习环境如何变化，从而理解、预测或规划现实世界行为的模型。",
+      "why_it_matters": "它被视为机器人和具身智能理解物理环境的重要候选路线。",
+      "maturity_status": "contested",
+      "uncertainty_note": "视频生成、3D 生成、JEPA、VLA 等路线是否都属于世界模型仍有分歧。",
+      "confidence": "medium",
+      "source_episode_ids": [39]
+    }
+  ]
+}

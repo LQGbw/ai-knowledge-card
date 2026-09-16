@@ -1,0 +1,18 @@
+[project]
+name = "ai-term-podcast-collector"
+version = "0.1.0"
+description = "A provenance-first podcast collector for an AI terminology card product"
+requires-python = ">=3.11"
+dependencies = [
+    "certifi>=2024.0",
+    "lark-channel-sdk>=1.4.0,<2.0.0",
+    "openai>=2.0.0",
+    "python-dotenv>=1.0.0,<2.0.0",
+    "truststore>=0.10.0,<1.0.0",
+]
+
+[tool.setuptools]
+packages = ["podcast_collector", "feishu_bot"]
+
+[project.scripts]
+ai-card-bot = "feishu_bot.__main__:main"

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "silicon-valley-101",
+    "name": "硅谷101",
+    "platform_url": "https://www.xiaoyuzhoufm.com/podcast/5e5c52c9418a84a04625e6cc",
+    "feed_url": "https://feeds.fireside.fm/sv101/rss",
+    "language": "zh-CN",
+    "authority": "expert_interview",
+    "enabled": true
+  },
+  {
+    "id": "42chapter",
+    "name": "42章经",
+    "platform_url": "https://www.xiaoyuzhoufm.com/podcast/648b0b641c48983391a63f98",
+    "feed_url": "https://feed.xyzfm.space/evgg6xle9rdc",
+    "language": "zh-CN",
+    "authority": "expert_interview",
+    "enabled": true
+  },
+  {
+    "id": "ai-insight-record",
+    "name": "AI智识录",
+    "platform_url": "https://podcasts.apple.com/cn/podcast/id1889829123",
+    "feed_url": "https://feed.xyzfm.space/fxrjpjcpycap",
+    "language": "zh-CN",
+    "authority": "secondary_digest",
+    "enabled": true
+  },
+  {
+    "id": "crossing",
+    "name": "十字路口Crossing",
+    "platform_url": "https://www.xiaoyuzhoufm.com/podcast/60502e253c92d4f62c2a9577",
+    "feed_url": "https://feed.xyzfm.space/68fyjknth9hj",
+    "language": "zh-CN",
+    "authority": "expert_interview",
+    "enabled": true
+  },
+  {
+    "id": "luanfanshu",
+    "name": "乱翻书",
+    "platform_url": "https://podcasts.apple.com/cn/podcast/id1591595410",
+    "feed_url": "https://feed.xyzfm.space/yxuruh3f9mc4",
+    "language": "zh-CN",
+    "authority": "expert_interview",
+    "enabled": true
+  },
+  {
+    "id": "people-park-ai",
+    "name": "人民公园说AI",
+    "platform_url": "https://podcasts.apple.com/cn/podcast/id1716905432",
+    "feed_url": "https://feed.xyzfm.space/49cgd8grgrnf",
+    "language": "zh-CN",
+    "authority": "secondary_digest",
+    "enabled": true
+  },
+  {
+    "id": "ai-product-insider",
+    "name": "AI产品内参",
+    "platform_url": "https://www.xiaoyuzhoufm.com/podcast/68efd5dcff2651aeae0bbd8a",
+    "feed_url": null,
+    "language": "zh-CN",
+    "authority": "secondary_digest",
+    "enabled": true
+  }
+]

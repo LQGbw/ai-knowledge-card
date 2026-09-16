@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# OS
+.DS_Store
+
+# 密钥（绝对不能提交）
+.env
+.env.*
+!.env.example
+
+# SQLite 临时文件（主数据库 .sqlite3 保留在仓库中，方便云电脑直接使用）
+data/*.sqlite3-shm
+data/*.sqlite3-wal
+
+# 前端依赖与构建产物（云电脑不需要运行前端）
+frontend/node_modules/
+frontend/dist/
+frontend/.next/
+frontend/.wrangler/
+frontend/.vinext/
+frontend/.openai/
+
+# 打包文件
+*.zip

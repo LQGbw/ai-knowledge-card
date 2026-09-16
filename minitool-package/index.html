@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>AI 概念抽卡</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-mark"><span>AI</span></div>
+      <nav aria-label="主导航">
+        <button class="nav-item active" id="daily-nav" type="button"><span>✦</span>今日抽卡</button>
+        <button class="nav-item" id="library-nav" type="button"><span>□</span>全部卡片</button>
+      </nav>
+      <div class="sidebar-note">
+        <span>已收藏</span>
+        <strong id="saved-count">0 / 12</strong>
+        <div class="progress"><i id="saved-progress"></i></div>
+      </div>
+    </aside>
+
+    <section class="workspace">
+      <header class="topbar">
+        <div><p class="eyebrow">AI CONCEPT DECK · 001</p><h1 id="page-title">今天，认识一个新概念</h1></div>
+        <div class="source-pill"><i></i> 12 张卡 · 18 条来源</div>
+      </header>
+
+      <section id="daily-view">
+        <div class="card-stage">
+          <div class="stack-card stack-two"></div>
+          <div class="stack-card stack-one"></div>
+          <button class="knowledge-card" id="knowledge-card" type="button" aria-label="翻转知识卡片">
+            <span class="print-pattern" id="card-pattern" aria-hidden="true"></span>
+            <span class="card-counter" id="card-counter"></span>
+            <span class="card-content front" id="card-front"></span>
+            <span class="card-content back" id="card-back" hidden></span>
+          </button>
+        </div>
+        <footer class="actions">
+          <button class="ghost-button" id="save-button" type="button">先收藏</button>
+          <button class="source-button" id="evidence-button" type="button">查看案例与出处</button>
+          <button class="primary-button" id="next-button" type="button">下一张 <span>→</span></button>
+        </footer>
+      </section>
+
+      <section class="library" id="library-view" hidden>
+        <div class="library-intro"><p>卡片是入口，不是结论。每张都保留概念成熟度、来源数量与边界提醒。</p><span>点击任意卡片进入阅读</span></div>
+        <div class="card-grid" id="card-grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <aside class="evidence-panel" id="evidence-panel" hidden aria-live="polite">
+    <button class="evidence-close" id="evidence-close" type="button" aria-label="关闭出处面板">×</button>
+    <div class="evidence-head"><span>PROVENANCE · 可追溯资料</span><i id="evidence-label"></i></div>
+    <strong id="evidence-case"></strong>
+    <div class="evidence-source" id="evidence-source"></div>
+    <p id="evidence-note"></p>
+  </aside>
+
+  <script src="./app.js"></script>
+</body>
+</html>
