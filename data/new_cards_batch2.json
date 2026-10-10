@@ -1,0 +1,204 @@
+{
+  "cards": [
+    {
+      "term": "MCP",
+      "aliases": ["Model Context Protocol", "模型上下文协议"],
+      "one_line_definition": "Anthropic 提出的开放标准，让 AI 能以统一方式连接外部工具、数据库和 API。",
+      "why_it_matters": "之前每个 AI 应用都要单独对接各种工具，MCP 像 USB-C 一样统一了接口，AI 配上 MCP 客户端就能即插即用各种工具，大幅降低集成成本。",
+      "maturity_status": "emerging",
+      "uncertainty_note": "MCP 刚推出不久，生态和工具支持还在早期，能否成为行业标准仍需观察更多厂商采纳。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "RAG",
+      "aliases": ["检索增强生成", "Retrieval-Augmented Generation"],
+      "one_line_definition": "让 AI 在回答前先从外部知识库检索相关资料，再基于检索结果生成答案。",
+      "why_it_matters": "纯大模型会编造事实，RAG 让 AI 的回答有据可查，是企业落地 AI 知识库、客服问答的主流方案。",
+      "maturity_status": "stable",
+      "uncertainty_note": "RAG 在简单场景成熟，但长文档、多跳推理、时效性更新等复杂场景仍有不少工程难题。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "大模型幻觉",
+      "aliases": ["Hallucination", "AI胡说"],
+      "one_line_definition": "AI 自信地编造出看似合理但实际错误或不存在的信息。",
+      "why_it_matters": "幻觉是 AI 落地最大的信任障碍，用户无法判断 AI 说的哪句是真的，直接影响客服、医疗、法律等高风险场景。",
+      "maturity_status": "contested",
+      "uncertainty_note": "幻觉产生的根本原因学界仍在争论，RAG、事实校验等方法能缓解但无法根除。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "AI对齐",
+      "aliases": ["AI Alignment", "价值对齐"],
+      "one_line_definition": "让 AI 的目标、行为和价值观与人类意图保持一致的研究领域。",
+      "why_it_matters": "随着 AI 能力越来越强，如果它的目标和人类不一致，越强越危险，对齐是 AI 安全的核心命题。",
+      "maturity_status": "contested",
+      "uncertainty_note": "对齐的方法和有效性存在巨大争议，很多对齐技术本身可能引入新的风险。",
+      "confidence": "medium",
+      "source_episode_ids": []
+    },
+    {
+      "term": "缩放定律",
+      "aliases": ["Scaling Laws", "规模定律"],
+      "one_line_definition": "AI 模型的性能随参数量、数据量和计算量的增长而可预测地提升。",
+      "why_it_matters": "缩放定律证明了 AI 能力可以靠堆算力持续提升，直接支撑了过去几年大模型军备竞赛的巨额投入。",
+      "maturity_status": "contested",
+      "uncertainty_note": "近期有研究认为缩放定律正在放缓，模型效率提升可能比单纯堆规模更重要。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "MoE",
+      "aliases": ["混合专家模型", "Mixture of Experts"],
+      "one_line_definition": "把大模型拆成多个小专家子网络，每次推理只激活其中少数几个，在保持总参数量的同时降低计算成本。",
+      "why_it_matters": "MoE 让我们能用同等算力训练更大的模型，是 GPT-4、DeepSeek 等顶级模型的核心架构之一。",
+      "maturity_status": "stable",
+      "uncertainty_note": "MoE 模型训练和推理稳定性仍有挑战，不同专家之间可能出现能力不均衡。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "向量数据库",
+      "aliases": ["Vector Database", "向量检索"],
+      "one_line_definition": "专门存储和检索向量嵌入的数据库，支持语义相似度搜索，是 RAG 系统的核心基础设施。",
+      "why_it_matters": "传统数据库按关键词匹配，向量数据库能按语义相似度搜索，让 AI 知识库检索成为可能。",
+      "maturity_status": "stable",
+      "uncertainty_note": "向量数据库和传统数据库的边界正在模糊，很多传统数据库也在增加向量检索能力。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "多智能体系统",
+      "aliases": ["Multi-agent Systems", "Agent协作"],
+      "one_line_definition": "多个 AI 智能体分工协作，分别负责规划、执行、审核等不同角色，共同完成复杂任务。",
+      "why_it_matters": "单个 AI 容易顾此失彼，多智能体分工像一个团队一样工作，能处理写代码、做研究、运营等复杂长流程任务。",
+      "maturity_status": "emerging",
+      "uncertainty_note": "多智能体的协作效率、成本控制和错误传播仍是工程难题，很多场景单智能体加好工具反而更高效。",
+      "confidence": "medium",
+      "source_episode_ids": []
+    },
+    {
+      "term": "AI编程智能体",
+      "aliases": ["AI Coding Agent", "AI程序员"],
+      "one_line_definition": "能自主理解需求、写代码、跑测试、修 bug 的 AI 编程助手，代表产品如 Cursor、Claude Code。",
+      "why_it_matters": "AI 编程智能体正在改变软件开发方式，从帮你补全代码变成能独立完成整个功能模块，程序员角色正在从写代码转向审查和引导 AI。",
+      "maturity_status": "emerging",
+      "uncertainty_note": "AI 编程在大型代码库、架构设计和复杂业务逻辑上仍有明显局限，安全问题也令人担忧。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "LoRA",
+      "aliases": ["低秩适配", "Low-Rank Adaptation"],
+      "one_line_definition": "一种高效微调技术，只训练模型中很小一部分参数，用极低的成本让大模型适配特定任务。",
+      "why_it_matters": "全量微调大模型成本极高，LoRA 让个人和小团队也能微调自己的专用模型，是 Personal Intelligence 趋势的技术基础。",
+      "maturity_status": "stable",
+      "uncertainty_note": "LoRA 对复杂任务的适配能力仍不如全量微调，不同任务需要不同的 LoRA 模块管理。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "上下文窗口",
+      "aliases": ["Context Window", "上下文长度"],
+      "one_line_definition": "AI 一次能处理的文本长度上限，决定了它能同时读多少资料、记住多少对话历史。",
+      "why_it_matters": "上下文窗口限制了 AI 能处理的任务复杂度，窗口越大，AI 能读完整本书、整个代码库，完成更复杂的任务。",
+      "maturity_status": "stable",
+      "uncertainty_note": "上下文窗口变长后，AI 对中间内容的注意力可能下降，长上下文不等于高质量长上下文理解。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "提示注入",
+      "aliases": ["Prompt Injection", "提示词攻击"],
+      "one_line_definition": "攻击者在输入中嵌入恶意指令，绕过 AI 原本的系统设定，让 AI 执行攻击者想要的操作。",
+      "why_it_matters": "当 AI 能调用工具、发邮件、操作数据库时，提示注入就像 SQL 注入一样危险，是 AI 应用安全的头号威胁。",
+      "maturity_status": "contested",
+      "uncertainty_note": "提示注入被证明很难完全防御，业界还没有公认的彻底解决方案。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "小语言模型",
+      "aliases": ["SLM", "Small Language Model"],
+      "one_line_definition": "参数量远小于 GPT-4 等大模型但在特定任务上表现优秀的模型，如 Llama 3 8B、Phi 系列。",
+      "why_it_matters": "不是所有场景都需要最大的模型，小模型成本低、速度快、可本地部署，正在成为 AI 落地的主力。",
+      "maturity_status": "emerging",
+      "uncertainty_note": "小模型在复杂推理和通用能力上仍有明显差距，能否持续缩小与大模型的差距还有争议。",
+      "confidence": "medium",
+      "source_episode_ids": []
+    },
+    {
+      "term": "端侧AI",
+      "aliases": ["On-device AI", "本地AI"],
+      "one_line_definition": "把 AI 模型直接运行在手机、电脑等本地设备上，不依赖云端服务器。",
+      "why_it_matters": "端侧 AI 保护隐私、响应快、零成本，是手机厂商和芯片厂商的下一个战场，也让 AI 应用更普及。",
+      "maturity_status": "emerging",
+      "uncertainty_note": "端侧硬件资源有限，能跑的模型能力受限，端云协同是更现实的路径。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "AI搜索",
+      "aliases": ["AI Search", "生成式搜索"],
+      "one_line_definition": "用 AI 直接总结答案并给出来源，而不是给你一排蓝色链接，代表产品如 Perplexity。",
+      "why_it_matters": "AI 搜索正在挑战 Google 的搜索霸主地位，用户不再需要自己点开十个链接找答案，直接获得总结好的结果。",
+      "maturity_status": "emerging",
+      "uncertainty_note": "AI 搜索的准确性和时效性仍有问题，商业化和用户习惯还在早期。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "数字孪生",
+      "aliases": ["Digital Twin", "数字镜像"],
+      "one_line_definition": "在虚拟空间中构建物理实体的精确数字副本，实时反映和模拟真实世界的状态变化。",
+      "why_it_matters": "数字孪生让工厂、城市、飞机可以在虚拟世界里先模拟再执行，是 AI 进入物理世界的桥梁之一。",
+      "maturity_status": "stable",
+      "uncertainty_note": "数字孪生的精度和实时性要求很高，构建和维护成本不低，并非所有场景都值得做。",
+      "confidence": "medium",
+      "source_episode_ids": []
+    },
+    {
+      "term": "AI副驾",
+      "aliases": ["AI Copilot", "AI助手模式"],
+      "one_line_definition": "AI 作为人类的辅助工具，在人主导的工作流中提供建议和草稿，人保留最终决策权。",
+      "why_it_matters": "AI 副驾是目前最成熟的人机协作模式，既利用了 AI 的效率，又保留了人的判断力，是企业落地 AI 的主流路径。",
+      "maturity_status": "stable",
+      "uncertainty_note": "副驾模式的局限在于人需要审查 AI 的输出，效率提升有上限，全自动模式是下一步方向。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "嵌入向量",
+      "aliases": ["Embedding", "向量嵌入"],
+      "one_line_definition": "把文字、图片等内容转换成一串数字向量，语义相近的内容在向量空间中距离也近。",
+      "why_it_matters": "嵌入向量是 AI 理解语义的基础，让计算机能计算两段文字的相似度，是 RAG、推荐系统、搜索的底层技术。",
+      "maturity_status": "stable",
+      "uncertainty_note": "嵌入模型的质量直接决定 RAG 效果，但嵌入技术本身相对成熟，不是主要瓶颈。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "推理成本",
+      "aliases": ["Inference Cost", "AI调用成本"],
+      "one_line_definition": "运行一次 AI 模型生成回答所需的计算成本，是 AI 产品商业化的核心经济变量。",
+      "why_it_matters": "推理成本决定了 AI 产品能不能赚钱，成本下降速度直接影响 AI 应用的普及速度和商业模式。",
+      "maturity_status": "stable",
+      "uncertainty_note": "推理成本下降速度受芯片供给和模型效率双重影响，预测难度较大。",
+      "confidence": "high",
+      "source_episode_ids": []
+    },
+    {
+      "term": "AI基准测试",
+      "aliases": ["AI Benchmark", "AI评测"],
+      "one_line_definition": "用标准化的测试集衡量 AI 模型在推理、编程、多语言等各方面能力的评分体系。",
+      "why_it_matters": "基准测试是判断 AI 模型强弱的通用语言，但模型可能为了刷分而针对性优化，导致分数和实际能力脱节。",
+      "maturity_status": "contested",
+      "uncertainty_note": "基准测试被广泛批评为「应试教育」，高分模型在真实任务中不一定表现好，更真实的评测方式仍在探索。",
+      "confidence": "high",
+      "source_episode_ids": []
+    }
+  ]
+}

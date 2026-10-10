@@ -14,6 +14,15 @@ __pycache__/
 data/*.sqlite3-shm
 data/*.sqlite3-wal
 
+# 机器人用户数据库（含订阅用户 open_id 等隐私，绝不提交）
+data/feishu_bot.sqlite3
+
+# 运行日志
+*.log
+
+# Python 构建产物
+*.egg-info/
+
 # 前端依赖与构建产物（云电脑不需要运行前端）
 frontend/node_modules/
 frontend/dist/

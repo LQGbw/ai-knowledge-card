@@ -98,24 +98,21 @@ def generate_card_drafts(
         raise RuntimeError("OpenAI SDK is not installed; run: python3 -m pip install -e .") from exc
 
     selected_model = model or os.getenv("OPENAI_MODEL") or DEFAULT_MODEL
-    client = OpenAI(api_key=api_key)
-    response = client.responses.create(
+    base_url = os.getenv("OPENAI_BASE_URL") or None
+    client = OpenAI(api_key=api_key, base_url=base_url)
+
+    # 使用 Chat Completions API（兼容 OpenAI 和火山引擎方舟/豆包）
+    response = client.chat.completions.create(
         model=selected_model,
-        instructions=INSTRUCTIONS + f"\n最多生成 {max_cards} 张卡。",
-        input=build_input(episodes),
-        reasoning={"effort": "low"},
-        text={
-            "format": {
-                "type": "json_schema",
-                "name": "knowledge_card_drafts",
-                "strict": True,
-                "schema": CARD_SCHEMA,
-            }
-        },
-        max_output_tokens=8000,
-        store=False,
+        messages=[
+            {"role": "system", "content": INSTRUCTIONS + f"\n最多生成 {max_cards} 张卡。"},
+            {"role": "user", "content": build_input(episodes)},
+        ],
+        response_format={"type": "json_object"},
+        max_tokens=8000,
+        temperature=0.3,
     )
-    raw = json.loads(response.output_text)
+    raw = json.loads(response.choices[0].message.content)
     drafts = parse_card_drafts(raw)[:max_cards]
     return validate_evidence(drafts, episodes), selected_model
 
